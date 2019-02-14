@@ -6,7 +6,33 @@
         xmlns:local="clr-namespace:NoticiasWeb"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <DataGrid x:Name="grid" AutoGenerateColumns="False" ItemsSource="{Binding}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionChanged="Grid_SelectionChanged" HorizontalScrollBarVisibility="Visible">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Image" Width="150"
+ IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding urlToImage}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn Header="Titulo"  Width="*" Binding="{Binding Path=title}" >
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+
+                </DataGridTextColumn>
+                <DataGridHyperlinkColumn  Header="URL" Width="*" Binding="{Binding Path=url}" IsReadOnly="True" >
+                    
+                       
+                </DataGridHyperlinkColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
     </Grid>
 </Window>
