@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using NoticiasWeb.Models;
 using System;
 using System.Collections.Generic;
 using System.Net;

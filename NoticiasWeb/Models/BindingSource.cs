@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace NoticiasWeb
+namespace NoticiasWeb.Models
 {
     internal class BindingSource
     {

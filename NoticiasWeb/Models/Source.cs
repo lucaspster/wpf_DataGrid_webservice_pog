@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NoticiasWeb
+namespace NoticiasWeb.Models
 {
     public class Source
     {
